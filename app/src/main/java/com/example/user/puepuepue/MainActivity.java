@@ -273,33 +273,8 @@ public class MainActivity extends AppCompatActivity  {
             public void onFinish() {
 
                 if(finalViewGone) {
-                    ScaleAnimation scaleAnimation= new ScaleAnimation(2, 0.5f, 2, 0.5f);
-                    scaleAnimation.setDuration(400);
-                    ScaleAnimation scaleAnimation1 = new ScaleAnimation(0.5f,2,0.5f,2);
-                    scaleAnimation1.setDuration(200);
 
-                    AnimationSet animationSet = new AnimationSet(false);
-                    animationSet.addAnimation(scaleAnimation);
-                    animationSet.addAnimation(scaleAnimation1);
-                    animationSet.setAnimationListener(new Animation.AnimationListener() {
-                        @Override
-                        public void onAnimationStart(Animation animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationEnd(Animation animation) {
-                            baserlay.removeView(finalRemovebadGuyView);
-                        }
-
-                        @Override
-                        public void onAnimationRepeat(Animation animation) {
-
-                        }
-                    });
-                    finalRemovebadGuyView.startAnimation(animationSet);
-
-
+                    baserlay.removeView(finalRemovebadGuyView);
 
                 }
                 baserlay.removeView(animationBulletView);
